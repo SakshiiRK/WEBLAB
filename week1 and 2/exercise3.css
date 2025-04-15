@@ -1,0 +1,158 @@
+/* Reset some default styles for consistency */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Main container for the content */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section styling */
+header {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #fff;
+    background-color: #132250;
+    padding: 30px 0;
+    border-radius: 8px;
+}
+
+header h1 {
+    font-size: 3.5em;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 1.2em;
+    color: #ddd;
+}
+
+/* Section headers */
+h2 {
+    font-size: 2.3em;
+    margin-bottom: 15px;
+    color: #1e5461;
+    font-weight: bold;
+}
+
+/* Subheadings for education, skills, etc. */
+h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #2a2a2a;
+    font-weight: bold;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 12px;
+    padding-left: 18px;
+    position: relative;
+    font-size: 1.1em;
+}
+
+ul li:before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #203a2e; /* Green tick for checklists */
+}
+
+/* Styling for sections */
+.section {
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: #fafafa;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+}
+
+/* Projects section styling */
+.projects {
+    background-color: #f1f8f3;
+    border: none;
+}
+
+/* Individual project styling */
+.project {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project h4 {
+    color: #2c3e50;
+    font-size: 1.8em;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.project p {
+    color: #555;
+    font-size: 1.1em;
+    line-height: 1.5;
+}
+
+/* Footer section styling */
+footer {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 1em;
+    color: #777;
+    border-top: 2px solid #ddd;
+}
+
+/* Add a responsive design for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 1.8em;
+    }
+
+    h3 {
+        font-size: 1.3em;
+    }
+
+    .project h4 {
+        font-size: 1.5em;
+    }
+
+    ul li {
+        font-size: 1em;
+    }
+}
