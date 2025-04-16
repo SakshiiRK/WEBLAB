@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f1f1f1;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            height: 100%;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+        }
+
+        .header {
+            padding: 20px;
+            text-align: left;
+            font-size: 26px;
+            background-color: #4A90E2;
+            color: white;
+            border-bottom: 4px solid #357ABD;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .header img {
+            height: 60px;
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        .header h1 {
+            display: inline;
+            margin-left: 10px;
+        }
+
+        .content {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 20%;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-right: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar h2 {
+            color: #2C3E50;
+            margin-bottom: 15px;
+        }
+
+        .sidebar p {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+
+        .sidebar ul li button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .sidebar ul li button:hover {
+            background-color: #2980b9;
+        }
+
+        .main {
+            width: 75%;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .box {
+            border: 2px solid #e2e2e2;
+            padding: 20px;
+            margin-bottom: 20px;
+            background-color: #fafafa;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4A90E2;
+            color: white;
+            border-top: 4px solid #357ABD;
+            border-radius: 0 0 10px 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: #3498db;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1><img src="download.jpeg" alt="Logo"> Web Programming</h1>
+        </div>
+        
+        <div class="content">
+            <div class="sidebar">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><button>Home</button></li>
+                    <li><button>About</button></li>
+                    <li><button>Contact</button></li>
+                </ul>
+            </div>
+            <div class="main">
+                <div class="box">
+                    <h2>Welcome to Web Programming</h2>
+                    <p>This is the home section where general information about the website can be displayed.</p>
+                    <p>CSS and HTML are foundational technologies used to structure and style web pages. Web programming is all about creating interactive and responsive web experiences.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p><strong>All rights reserved &copy; 2025</strong></p>
+        </div>
+    </div>
+
+</body>
+</html>
