@@ -1,0 +1,28 @@
+body {
+    color: rgb(2, 4, 7);
+    background-color: #c9d3ee;
+    font-family: "ubuntu", sans-serif;
+    font-size: 16px;
+}
+nav{
+    float:left;
+    display: inline-block;
+}
+.container{
+    display:inline-block;
+    position: relative;
+    left: 100px;
+    border-color:green ;
+    border-left:2px;
+    border-style:solid;
+    border-bottom: 0px;
+    border-right: 0px;
+    border-top: 0px;
+    padding : 10px;
+}
+.box{
+    border-color:green;
+    border-style:dotted;
+   float:right;
+    display: inline-block;
+}

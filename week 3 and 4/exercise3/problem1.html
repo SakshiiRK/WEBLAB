@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript Scope Quiz</title>
+</head>
+<body>
+  <h1>JavaScript Scope Quiz</h1>
+  <button onclick="startQuiz()">Start Quiz</button>
+  <button onclick="reviewScore()">Review Score (Bonus)</button>
+
+  <script>
+   
+    var score = 0;
+
+    
+    function questionOne() {
+      
+      var answer = prompt("Question 1: What is the output of 'typeof null'?");
+      if (answer.toLowerCase() === "object") {
+        score++;
+        console.log("Correct! Score is now: " + score);
+      } else {
+        console.log("Wrong. It's 'object'. Score: " + score);
+      }
+    }
+
+    
+    var questionTwo = function() {
+      var answer = prompt("Question 2: What keyword is used to declare a block-scoped variable?");
+      if (answer.toLowerCase() === "let") {
+        score++;
+        console.log("Correct! Score is now: " + score);
+      } else {
+        console.log("Wrong. It's 'let'. Score: " + score);
+      }
+    };
+
+   
+    function questionThree() {
+      console.log("Value of x before declaration: " + x); 
+      var x = "hoisted";
+
+      var answer = prompt("Question 3: What will 'console.log(x)' show before 'var x = ...'? (write 'undefined' or 'error')");
+      if (answer.toLowerCase() === "undefined") {
+        score++;
+        console.log("Correct! Score is now: " + score);
+      } else {
+        console.log("Wrong. It's 'undefined'. Score: " + score);
+      }
+
+      
+      var scoreInside = 999;
+    }
+
+   
+    function startQuiz() {
+      score = 0; 
+      questionOne();
+      questionTwo();
+      questionThree();
+      alert("Quiz completed! Your score is: " + score + " out of 3");
+    }
+
+    
+    function reviewScore() {
+      try {
+        console.log("Trying to access scoreInside: " + scoreInside);
+        alert("Score inside question function is: " + scoreInside);
+      } catch (err) {
+        console.error("Error accessing scoreInside:", err.message);
+        alert("Cannot access local variable 'scoreInside' from outside its function scope.");
+      }
+    }
+  </script>
+</body>
+</html>

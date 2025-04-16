@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Order Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        form {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            margin: auto;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+        }
+
+        legend {
+            font-weight: bold;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #5cb85c;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #4cae4c;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="POST" autocomplete="on">
+        
+        <h4 style="color: #817db7; font-family: Arial, sans-serif; font-size: 20px; font-weight: bold;">
+            Book Order Form
+        </h4>
+        
+        <fieldset>
+            <legend>Customer Info</legend>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required autofocus>
+
+            <label for="telephone">Telephone:</label>
+            <input type="tel" id="telephone" name="telephone" placeholder="123-456-7890" 
+                   pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" multiple required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Books</legend>
+
+            <label for="book">Select a Book:</label>
+            <input list="book-list" id="book" name="book" required>
+            <datalist id="book-list">
+                <option value="The Great Gatsby"></option>
+                <option value="To Kill a Mockingbird"></option>
+                <option value="1984"></option>
+                <option value="Moby Dick"></option>
+                <option value="Pride and Prejudice"></option>
+            </datalist>
+
+            <label for="quantity">Quantity (Maximum 5):</label>
+            <input type="number" id="quantity" name="quantity" min="1" max="5" required>
+        </fieldset>
+
+        <button type="submit">Submit Order</button>
+    </form>
+
+</body>
+</html>
+
